@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+FitBuddy | Generate Plan
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<section class="hero">
+
+    <div class="badge">
+        AI FITNESS PLANNER
+    </div>
+
+
+    <h1>
+        Build your
+        <span>7-day</span>
+        fitness plan.
+    </h1>
+
+
+    <p>
+
+        Enter your basic profile and let
+        FitBuddy create a personalized
+        workout routine with an AI-generated
+        nutrition and recovery tip.
+
+    </p>
+
+</section>
+
+
+
+<form
+    class="card form-grid"
+    method="post"
+    action="/generate-workout"
+>
+
+
+    <div class="form-group">
+
+        <label>
+            Name
+        </label>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter your name"
+            required
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            User ID
+        </label>
+
+        <input
+            type="text"
+            name="user_id"
+            placeholder="Example: FB001"
+            required
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            Age
+        </label>
+
+        <input
+            type="number"
+            name="age"
+            min="13"
+            max="100"
+            required
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            Weight (kg)
+        </label>
+
+        <input
+            type="number"
+            name="weight"
+            min="20"
+            max="500"
+            step="0.1"
+            required
+        >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            Fitness Goal
+        </label>
+
+
+        <select
+            name="goal"
+            required
+        >
+
+            <option value="">
+                Select your goal
+            </option>
+
+            <option value="Weight loss">
+                Weight Loss
+            </option>
+
+            <option value="Muscle gain">
+                Muscle Gain
+            </option>
+
+            <option value="General wellness">
+                General Wellness
+            </option>
+
+            <option value="Flexibility">
+                Flexibility
+            </option>
+
+            <option value="Endurance">
+                Endurance
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <div class="form-group">
+
+        <label>
+            Workout Intensity
+        </label>
+
+
+        <select
+            name="intensity"
+            required
+        >
+
+            <option value="low">
+                Low
+            </option>
+
+            <option
+                value="medium"
+                selected
+            >
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+
+        </select>
+
+    </div>
+
+
+
+    <div class="form-submit">
+
+        <button
+            type="submit"
+        >
+            Generate 7-Day Plan →
+        </button>
+
+    </div>
+
+
+</form>
+
+
+
+<div class="warning">
+
+    AI-generated fitness guidance is for
+    general wellness and is not a medical
+    diagnosis or treatment.
+
+</div>
+
+
+{% endblock %}

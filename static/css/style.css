@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        #080d19;
+
+    color:
+        #f1f5f9;
+
+    line-height:
+        1.6;
+}
+
+
+.navbar {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        0 7%;
+
+    background:
+        #0d1425;
+
+    border-bottom:
+        1px solid #222d45;
+}
+
+
+.logo {
+
+    color:
+        white;
+
+    text-decoration:
+        none;
+
+    font-size:
+        24px;
+
+    font-weight:
+        800;
+
+    margin-right:
+        auto;
+}
+
+
+.nav-home {
+
+    color:
+        #b7c2d8;
+
+    text-decoration:
+        none;
+}
+
+
+.container {
+
+    max-width:
+        1080px;
+
+    margin:
+        auto;
+
+    padding:
+        45px 20px;
+}
+
+
+.hero {
+
+    max-width:
+        750px;
+
+    padding:
+        30px 0;
+}
+
+
+.badge {
+
+    display:
+        inline-block;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        999px;
+
+    background:
+        #12372f;
+
+    color:
+        #7ce6c4;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+}
+
+
+h1 {
+
+    font-size:
+        48px;
+
+    line-height:
+        1.1;
+
+    margin:
+        18px 0;
+}
+
+
+h1 span {
+
+    color:
+        #70e5c1;
+}
+
+
+.hero p {
+
+    color:
+        #aab5c9;
+
+    font-size:
+        17px;
+}
+
+
+.card {
+
+    background:
+        #111a2e;
+
+    border:
+        1px solid #26324b;
+
+    border-radius:
+        18px;
+
+    padding:
+        25px;
+
+    margin:
+        20px 0;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.15);
+}
+
+
+.form-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        20px;
+}
+
+
+.form-group label {
+
+    display:
+        block;
+
+    font-weight:
+        600;
+}
+
+
+input,
+select,
+textarea {
+
+    width:
+        100%;
+
+    margin-top:
+        8px;
+
+    padding:
+        13px;
+
+    background:
+        #080f1e;
+
+    color:
+        white;
+
+    border:
+        1px solid #35425e;
+
+    border-radius:
+        10px;
+
+    font-size:
+        15px;
+}
+
+
+textarea {
+
+    min-height:
+        150px;
+
+    resize:
+        vertical;
+}
+
+
+.form-submit {
+
+    grid-column:
+        1 / -1;
+}
+
+
+button,
+.button {
+
+    display:
+        inline-block;
+
+    border:
+        none;
+
+    padding:
+        13px 20px;
+
+    border-radius:
+        10px;
+
+    background:
+        #70e5c1;
+
+    color:
+        #06120e;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    text-decoration:
+        none;
+}
+
+
+.secondary {
+
+    background:
+        #222e48;
+
+    color:
+        white;
+}
+
+
+.warning {
+
+    color:
+        #8f9db4;
+
+    font-size:
+        13px;
+
+    margin-top:
+        15px;
+}
+
+
+.page-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+}
+
+
+.profile {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        12px;
+}
+
+
+.profile div {
+
+    background:
+        #0b1325;
+
+    padding:
+        15px;
+
+    border-radius:
+        10px;
+}
+
+
+.profile small {
+
+    display:
+        block;
+
+    color:
+        #8290a8;
+
+    text-transform:
+        uppercase;
+
+    font-size:
+        10px;
+}
+
+
+.profile strong {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+}
+
+
+.plan {
+
+    white-space:
+        pre-wrap;
+
+    overflow:
+        auto;
+
+    background:
+        #070c17;
+
+    border:
+        1px solid #202b42;
+
+    padding:
+        20px;
+
+    border-radius:
+        12px;
+
+    font-family:
+        Consolas,
+        monospace;
+
+    font-size:
+        13px;
+}
+
+
+.nutrition-card {
+
+    padding:
+        25px;
+
+    margin:
+        20px 0;
+
+    border-radius:
+        18px;
+
+    border:
+        1px solid #2c6b5d;
+
+    background:
+        #102a26;
+}
+
+
+.nutrition-card p {
+
+    color:
+        #c9eee3;
+}
+
+
+.success {
+
+    margin-top:
+        18px;
+
+    padding:
+        13px;
+
+    background:
+        #123a31;
+
+    color:
+        #9df2d8;
+
+    border-radius:
+        10px;
+}
+
+
+.error-card {
+
+    border-color:
+        #713636;
+}
+
+
+.admin-info {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+}
+
+
+.admin-info span {
+
+    padding:
+        8px 12px;
+
+    border-radius:
+        8px;
+
+    background:
+        #0b1325;
+}
+
+
+.compact {
+
+    max-height:
+        400px;
+}
+
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        35px;
+
+    color:
+        #66748e;
+
+    font-size:
+        12px;
+}
+
+
+@media (max-width: 750px) {
+
+    h1 {
+
+        font-size:
+            38px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .form-submit {
+
+        grid-column:
+            auto;
+    }
+
+
+    .profile {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .page-header {
+
+        align-items:
+            flex-start;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .profile {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}

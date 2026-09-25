@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+FitBuddy | Admin Dashboard
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="page-header">
+
+    <h1>
+        Admin Dashboard
+    </h1>
+
+
+    <a
+        href="/"
+        class="button secondary"
+    >
+        Home
+    </a>
+
+</div>
+
+
+
+{% if not users %}
+
+<section class="card">
+
+    <p>
+        No users have been registered yet.
+    </p>
+
+</section>
+
+{% endif %}
+
+
+
+{% for user in users %}
+
+
+<section class="card admin-user">
+
+
+    <h2>
+
+        {{ user.username }}
+
+        <small>
+            ({{ user.user_id }})
+        </small>
+
+    </h2>
+
+
+    <div class="admin-info">
+
+        <span>
+            <b>Age:</b>
+            {{ user.age }}
+        </span>
+
+
+        <span>
+            <b>Weight:</b>
+            {{ user.weight }} kg
+        </span>
+
+
+        <span>
+            <b>Goal:</b>
+            {{ user.goal }}
+        </span>
+
+
+        <span>
+            <b>Intensity:</b>
+            {{ user.intensity }}
+        </span>
+
+    </div>
+
+
+
+    {% for plan in user.plans %}
+
+
+    <h3>
+        Plan #{{ plan.id }}
+    </h3>
+
+
+    <h4>
+        Original Plan
+    </h4>
+
+
+    <pre class="plan compact">
+{{ plan.original_plan }}
+    </pre>
+
+
+
+    {% if plan.updated_plan %}
+
+    <h4>
+        Updated Plan
+    </h4>
+
+
+    <pre class="plan compact">
+{{ plan.updated_plan }}
+    </pre>
+
+
+    <p>
+
+        <strong>
+            User Feedback:
+        </strong>
+
+        {{ plan.feedback }}
+
+    </p>
+
+    {% endif %}
+
+
+    {% endfor %}
+
+
+</section>
+
+
+{% endfor %}
+
+
+{% endblock %}

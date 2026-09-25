@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+FitBuddy | Your Plan
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="page-header">
+
+    <div>
+
+        <div class="badge">
+
+            {% if updated %}
+
+            UPDATED PLAN
+
+            {% else %}
+
+            PERSONALIZED PLAN
+
+            {% endif %}
+
+        </div>
+
+
+        <h1>
+            Hi {{ username }} 👋
+        </h1>
+
+    </div>
+
+
+    <a
+        href="/"
+        class="button secondary"
+    >
+        New Plan
+    </a>
+
+</div>
+
+
+
+<section class="card profile">
+
+    <div>
+        <small>User ID</small>
+        <strong>{{ user_id }}</strong>
+    </div>
+
+
+    <div>
+        <small>Age</small>
+        <strong>{{ age }}</strong>
+    </div>
+
+
+    <div>
+        <small>Weight</small>
+        <strong>{{ weight }} kg</strong>
+    </div>
+
+
+    <div>
+        <small>Goal</small>
+        <strong>{{ goal }}</strong>
+    </div>
+
+
+    <div>
+        <small>Intensity</small>
+        <strong>{{ intensity|title }}</strong>
+    </div>
+
+</section>
+
+
+
+<section class="card">
+
+    <h2>
+        {% if updated %}
+        Updated 7-Day Workout Plan
+        {% else %}
+        7-Day Workout Plan
+        {% endif %}
+    </h2>
+
+
+    <pre class="plan">
+{{ workout_plan }}
+    </pre>
+
+</section>
+
+
+{% if updated %}
+
+<section class="card">
+
+    <h2>
+        Your Feedback
+    </h2>
+
+    <p class="feedback-text">
+        {{ feedback }}
+    </p>
+
+</section>
+
+{% endif %}
+
+
+
+<section class="nutrition-card">
+
+    <h2>
+        🥗 Nutrition / Recovery Tip
+    </h2>
+
+
+    <p>
+        {{ nutrition_tip }}
+    </p>
+
+</section>
+
+
+
+<section class="card">
+
+    <h2>
+        🔄 Refine Your Plan
+    </h2>
+
+
+    <p>
+        Tell FitBuddy what you want changed.
+    </p>
+
+
+    <form
+        method="post"
+        action="/submit-feedback"
+    >
+
+
+        <div class="form-group">
+
+            <label for="feedback-user-id">
+                Your unique User ID
+            </label>
+
+            <input
+                id="feedback-user-id"
+                type="text"
+                name="user_id"
+                value="{{ user_id }}"
+                readonly
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="feedback-text">
+                Your feedback
+            </label>
+
+
+        <textarea
+            id="feedback-text"
+            name="feedback"
+            maxlength="2000"
+            placeholder="Example: Add more cardio and make Friday a lighter day."
+            required
+        ></textarea>
+
+        </div>
+
+
+        <button type="submit">
+
+            Update Plan with AI →
+
+        </button>
+
+
+    </form>
+
+
+    {% if updated %}
+
+    <div class="success">
+
+        ✓ Your workout plan was
+        successfully updated.
+
+    </div>
+
+    {% endif %}
+
+
+</section>
+
+
+{% endblock %}
