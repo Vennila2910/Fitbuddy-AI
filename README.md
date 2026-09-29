@@ -3,6 +3,7 @@ COLLEGE ID : UNM1659
 # FitBuddy - AI Fitness Plan Generator using Gemini Models
 
 An AI-powered web application that generates personalized fitness and diet plans using Google Gemini models.
+# project ID : SWTID-2026-7875
 
 ## Team Members
 * Vennila M (Team Lead) - NM ID : 44264587515D192BE3A42C15AB903484
